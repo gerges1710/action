@@ -1,0 +1,11 @@
+# 1️⃣ صورة Java
+FROM openjdk:17-jdk-slim
+
+# 2️⃣ فولدر الشغل جوه الكونتينر
+WORKDIR /app
+
+# 3️⃣ ننسخ ملف الـ jar
+COPY target/*.jar app.jar
+
+# 4️⃣ نشغل التطبيق
+CMD ["java", "-jar", "app.jar"]
